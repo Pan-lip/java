@@ -1,0 +1,48 @@
+
+public class Ex4 {
+    public static void main(String[] args) {
+        Scanner le = new Scanner(System.in);
+        int opcao;
+        int d1, d2, d3; //distancias
+        int r1, r2, r3; //ritmos
+
+        do{
+            System.out.println("1: Média aritmética");
+            System.out.println("2: Média ponderada");
+            System.out.println("3: Encerrar");
+            opcao = le.nextInt();
+            switch (opcao) {
+                case 1:
+                    System.out.println("Informe as distâncias dos 3 dias");
+                    d1 = le.nextInt();
+                    d2 = le.nextInt();
+                    d3 = le.nextInt();
+                    System.out.println("Média dos 3 dias em km: "+ (d1+d2+d3)/3.0);
+                    break;
+                case 2:
+                    System.out.println("Distância: ");
+                    d1 = le.nextInt();
+                    System.out.println("Ritmo: ");
+                    r1 = le.nextInt();
+                    System.out.println("Distância: ");
+                    System.out.println("Distância: ");
+                    d2 = le.nextInt();
+                    System.out.println("Ritmo: ");
+                    r2 = le.nextInt();
+                    System.out.println("Distância: ");
+                    d3 = le.nextInt();
+                    System.out.println("Ritmo: ");
+                    r3 = le.nextInt();
+                    double mediaPonderada = (double) ((d1*r1)+(d2*r2)+(d3*r3))/(d1+d2+d3);
+                    System.out.println("Média ponderada ritmo (min/km): "+mediaPonderada);
+                    break;
+                case 3:
+                    System.out.println("Encerra");
+                    break;
+                default:
+                    System.out.println("Opção Inválida");
+            }
+
+        }while (opcao !=3);
+    }
+}
